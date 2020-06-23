@@ -2923,7 +2923,7 @@ article .readmore >a {
   align-items: center;
   align-self: center;
   align-content: center;
-  color: #555;
+  color: rgba(255,255,255,0.65);
   padding: 16px;
 }
 .cover-wrapper .cover .cover-body div.b {
@@ -5000,7 +5000,7 @@ ul.list-v >li>a.active {
     background: transparent !important;
     margin-top: 32px;
     backdrop-filter: none;
-    color: #555;
+    color: #fff;
   }
 }
 .widget.text .content {
