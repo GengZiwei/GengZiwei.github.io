@@ -340,7 +340,15 @@
           <p>在平常敲代码过程中，我们总是想更快的处理好我们的代码逻辑实现对业务，但是却写出来了大量的不好维护代码，那是因为你没有使用到好的小技巧~</p>
 <a id="more"></a>
 
-<h2 id="1-使用-sync修饰符"><a href="#1-使用-sync修饰符" class="headerlink" title="1.使用.sync修饰符"></a>1.使用.sync修饰符</h2><p>在<a href="https://cn.vuejs.org/v2/guide/custom-directive.html" target="_blank" rel="noopener">官方文档</a>中介绍.sync为自定义事件的一种使用方式，可以对prop进行“双向绑定”</p>
+<h2 id="1-使用-sync修饰符"><a href="#1-使用-sync修饰符" class="headerlink" title="1.使用.sync修饰符"></a>1.使用.sync修饰符</h2><p>在<a href="https://cn.vuejs.org/v2/guide/components-custom-events.html#sync-%E4%BF%AE%E9%A5%B0%E7%AC%A6" target="_blank" rel="noopener">官方文档</a>中介绍.sync为自定义事件的一种使用方式，可以对prop进行“双向绑定”.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># 父级组件</span><br><span class="line">&lt;span :title.sync&#x3D;&quot;title&quot;&gt;&lt;&#x2F;span&gt;</span><br><span class="line"></span><br><span class="line">#子级组件</span><br><span class="line"></span><br><span class="line">this.$emit(&#39;update:title&#39;, newTitle)</span><br></pre></td></tr></table></figure>
+<p>通过以上的方式就可以直接完成对父级数据的修改不需要父级重新赋值,.sync 的固定格式为updata:属性名。</p>
+<p>大家都知道vue进行对父级的直接修改会进行报错,推荐使用的是$emit的方式来进行推送事件进行修改数据,这样的做无论是写在 template 修改还是在 methods 上面进行修改数据都会产生代码冗余, 写在methods会导致更新方式跟修改数据不在一起狠难追踪。</p>
+<p>注意：</p>
+<ul>
+<li>sync 传递值须传递一个变量执行不然无法工作。</li>
+<li>sync 传递值不可以跟表达式进行一起使用</li>
+</ul>
 
           
             <div class='article_footer'>
@@ -375,7 +383,7 @@
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-06-24T15:26:01+08:00">
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-06-24T18:22:55+08:00">
   <a class='notlink'>
     <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
     <p>更新于：2020年6月24日</p>
