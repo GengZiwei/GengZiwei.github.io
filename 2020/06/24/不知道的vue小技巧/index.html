@@ -5,8 +5,6 @@
   <!-- SEO相关 -->
   
     
-      <meta name="robots" content="noindex,follow">
-    
   
   <!-- 渲染优化 -->
   <meta name="renderer" content="webkit">
@@ -18,8 +16,12 @@
 
   <!-- 页面元数据 -->
   
-    <title>归档 - 清度|耿紫威的个人博客</title>
+    <title>不知道的vue小技巧 - 清度|耿紫威的个人博客</title>
   
+    <meta name="keywords" content="vue,js">
+  
+  
+    <meta name="description" content="在平常敲代码过程中，我们总是想更快的处理好我们的代码逻辑实现对业务，但是却写出来了大量的不好维护代码，那是因为你没有使用到好的小技巧~">
   
 
   <!-- feed -->
@@ -70,61 +72,7 @@
 
 <body>
   
-  <div class="cover-wrapper">
-    
-      <cover class='cover  half'>
-        <div class='cover-body'>
-  <div class='a'>
-    
-    
-      <p class="title">有朋自远方来</p>
-    
-    
-      <p class="subtitle">亦是清都山水郎</p>
-    
-  </div>
-  <div class='b'>
-    
-      <div class="m_search">
-        <form name="searchform" class="form u-search-form">
-          <input type="text" class="input u-search-input" placeholder="" />
-          <i class="icon fas fa-search fa-fw"></i>
-        </form>
-      </div>
-    
-    <div class='menu navigation'>
-      <ul class='cover-list-h'>
-        
-          
-            <li>
-              <a class="nav home"
-                href="https://gengziwei.github.io/"
-                
-                
-                id="https:gengziweigithubio">
-                <i class='fas fa-book fa-fw'></i>文档
-              </a>
-            </li>
-          
-            <li>
-              <a class="nav home"
-                href="https://gengziwei.github.io/"
-                
-                
-                id="https:gengziweigithubio">
-                <i class='fas fa-rss fa-fw'></i>博文
-              </a>
-            </li>
-          
-        
-      </ul>
-    </div>
-  </div>
-</div>
-
-      </cover>
-    
-    <div id="loading-bar-wrapper">
+  <div id="loading-bar-wrapper">
   <div id="loading-bar"></div>
 </div>
 <header class="l_header shadow blur">
@@ -314,106 +262,275 @@
 
 <script>setLoadingBarProgress(40);</script>
 
-  </div>
 
 
-  <div class="l_body">
+  <div class="l_body nocover">
     <div class='body-wrapper'>
       
 
 <div class='l_main'>
-	
-	  <article id="archive-page" class="post article white-box reveal shadow">
-	    <section class="archive">
-	      
-	          <div class="archive-item archive-year mark">
-	            <h2>2020</h2>
-	          </div>
-	      
-	          <div class="archive-item archive-post mark">
-	            <a href="/2020/06/24/%E4%B8%8D%E7%9F%A5%E9%81%93%E7%9A%84vue%E5%B0%8F%E6%8A%80%E5%B7%A7/">
-	              <time>06-24</time>
-	              <span class="title">
-	                
-	                  不知道的vue小技巧
-	                
-	                
-									
-									
-	              </span>
-	            </a>
-	          </div>
-	      
-	          <div class="archive-item archive-post mark">
-	            <a href="/2020/06/19/hello-world/">
-	              <time>06-19</time>
-	              <span class="title">
-	                
-	                  Hello
-	                
-	                
-									
-									
-	              </span>
-	            </a>
-	          </div>
-	      
-	    </section>
-	  </article>
-	
+  
+
+  
+    <article id="post" class="post white-box reveal shadow article-type-post" itemscope itemprop="blogPost">
+      
+
+
+  <section class='meta'>
+    
+      
+      
+      <div class="meta" id="header-meta">
+        
+          
+  <h1 class="title">
+    <a href="/2020/06/24/%E4%B8%8D%E7%9F%A5%E9%81%93%E7%9A%84vue%E5%B0%8F%E6%8A%80%E5%B7%A7/">
+      不知道的vue小技巧
+    </a>
+  </h1>
+
+
+        
+        <div class='new-meta-box'>
+          
+            
+          
+            
+              
+  
+  <div class='new-meta-item category'>
+    <a href='/categories/vue/' rel="nofollow">
+      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
+      <p>vue</p>
+    </a>
+  </div>
+
+
+            
+          
+            
+              <div class="new-meta-item date">
+  <a class='notlink'>
+    <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>发布于：2020年6月24日</p>
+  </a>
+</div>
+
+            
+          
+            
+              
+
+            
+          
+        </div>
+        
+          <hr>
+        
+      </div>
+    
+  </section>
+
+
+      <section class="article typo">
+        <div class="article-entry" itemprop="articleBody">
+          
+          <p>在平常敲代码过程中，我们总是想更快的处理好我们的代码逻辑实现对业务，但是却写出来了大量的不好维护代码，那是因为你没有使用到好的小技巧~</p>
+<a id="more"></a>
+
+<h2 id="1-使用-sync修饰符"><a href="#1-使用-sync修饰符" class="headerlink" title="1.使用.sync修饰符"></a>1.使用.sync修饰符</h2><p>在<a href="https://cn.vuejs.org/v2/guide/custom-directive.html" target="_blank" rel="noopener">官方文档</a>中介绍.sync为自定义事件的一种使用方式，可以对prop进行“双向绑定”</p>
+
+          
+            <div class='article_footer'>
+              
+                
+  
+    
+    
+
+
+
+  
+
+  
+    
+    
+
+
+
+  
+
+
+              
+            </div>
+          
+        </div>
+        
+          
+
+
+  <section class='meta' id="footer-meta">
+    <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-06-24T15:26:01+08:00">
+  <a class='notlink'>
+    <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
+    <p>更新于：2020年6月24日</p>
+  </a>
+</div>
+
+        
+      
+        
+          
+  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/vue/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>vue</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/js/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>js</p></a></div>
+
+
+        
+      
+        
+          
+
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
+    
+      
+        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer"
+          
+          href="http://connect.qq.com/widget/shareqq/index.html?url=https://gengziwei.github.io/2020/06/24/%E4%B8%8D%E7%9F%A5%E9%81%93%E7%9A%84vue%E5%B0%8F%E6%8A%80%E5%B7%A7/&title=不知道的vue小技巧 - 清度|耿紫威的个人博客&summary=在平常敲代码过程中，我们总是想更快的处理好我们的代码逻辑实现对业务，但是却写出来了大量的不好维护代码，那是因为你没有使用到好的小技巧~"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/logo/128/qq.png">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer"
+          
+          href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://gengziwei.github.io/2020/06/24/%E4%B8%8D%E7%9F%A5%E9%81%93%E7%9A%84vue%E5%B0%8F%E6%8A%80%E5%B7%A7/&title=不知道的vue小技巧 - 清度|耿紫威的个人博客&summary=在平常敲代码过程中，我们总是想更快的处理好我们的代码逻辑实现对业务，但是却写出来了大量的不好维护代码，那是因为你没有使用到好的小技巧~"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/logo/128/qzone.png">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer"
+          
+          href="http://service.weibo.com/share/share.php?url=https://gengziwei.github.io/2020/06/24/%E4%B8%8D%E7%9F%A5%E9%81%93%E7%9A%84vue%E5%B0%8F%E6%8A%80%E5%B7%A7/&title=不知道的vue小技巧 - 清度|耿紫威的个人博客&summary=在平常敲代码过程中，我们总是想更快的处理好我们的代码逻辑实现对业务，但是却写出来了大量的不好维护代码，那是因为你没有使用到好的小技巧~"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/logo/128/weibo.png">
+          
+        </a>
+      
+    
+  </div>
+</div>
+
+
+
+        
+      
+    </div>
+  </section>
+
+
+        
+        
+          <div class="prev-next">
+            
+            
+              <a class='next' href='/2020/06/19/hello-world/'>
+                <p class='title'>Hello<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+                <p class='content'>这是我的第一篇文章,美好生活从这里开始。
+
+</p>
+              </a>
+            
+          </div>
+        
+      </section>
+    </article>
+  
+
+  
+    <!-- 显示推荐文章和评论 -->
+
+
+
+  <article class="post white-box reveal comments shadow">
+    <section class="article typo">
+      <p ct><i class='fas fa-comments'></i> 评论</p>
+      
+      
+      
+      
+      
+      
+        <section id="comments">
+          <div id="valine_container" class="valine_thread">
+            <i class="fas fa-cog fa-spin fa-fw fa-2x"></i>
+          </div>
+        </section>
+      
+      
+    </section>
+  </article>
+
+
+  
+
+
+
+
+<!-- 根据页面mathjax变量决定是否加载MathJax数学公式js -->
+
+
+
+  <script>
+    window.subData = {
+      title: '不知道的vue小技巧',
+      tools: true
+    }
+  </script>
+
+
 </div>
 <aside class='l_side'>
   
   
-    
-    
-  
 
-  <section class="widget category shadow desktop">
+  
+    
+    
+
+
+  <section class="widget toc-wrapper shadow desktop mobile">
     
   <header>
     
-      <a href='/categories/'><i class="fas fa-folder-open fa-fw" aria-hidden="true"></i><span class='name'>文章分类</span></a>
+      <i class="fas fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
     
   </header>
 
 
     <div class='content'>
-      <ul class="entry navigation">
-        
-          <li><a class="flat-box"
-            title="/categories/vue/" href="/categories/vue/"
-            id="categoriesvue"
-            ><div class='name'>vue</div><div class='badge'>(1)</div></a></li>
-        
-      </ul>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-使用-sync修饰符"><span class="toc-text">1.使用.sync修饰符</span></a></li></ol>
     </div>
   </section>
 
-
-  
-
-  
-    
-    
-  
-
-  <section class="widget tagcloud shadow desktop mobile">
-    
-  <header>
-    
-      <a href='/tags/'><i class="fas fa-tags fa-fw" aria-hidden="true"></i><span class='name'>热门标签</span></a>
-    
-  </header>
-
-
-    <div class='content'>
-      <a href="/tags/hello/" style="font-size: 14px; color: #999">hello</a> <a href="/tags/js/" style="font-size: 14px; color: #999">js</a> <a href="/tags/vue/" style="font-size: 14px; color: #999">vue</a>
-    </div>
-  </section>
-
-
-  
 
   
 
@@ -508,14 +625,6 @@
   </footer>
 
 <script>setLoadingBarProgress(80);</script>
-
-
-
-
-	<!-- 根据主题中的设置决定是否在archive中针对摘要部分的MathJax公式加载mathjax.js文件 -->
-	
-
-	
 
 
       <script>setLoadingBarProgress(60);</script>
@@ -630,6 +739,60 @@
 
 
 
+
+  
+    
+<script src="https://cdn.jsdelivr.net/npm/valine@1.4/dist/Valine.min.js"></script>
+
+  
+  <script>
+  var GUEST_INFO = ['nick','mail','link'];
+  var meta = 'nick,mail'.split(',').filter(function(item){
+    return GUEST_INFO.indexOf(item) > -1
+  });
+  var REQUIRED_FIELDS = ['nick','mail','link'];
+  var requiredFields = 'nick,mail'.split(',').filter(function(item){
+    return REQUIRED_FIELDS.indexOf(item) > -1
+  });
+  var valine = new Valine();
+  function emoji(path, idx, ext) {
+      return path + "/" + path + "-" + idx + "." + ext;
+  }
+  var emojiMaps = {};
+  for (var i = 1; i <= 54; i++) {
+    emojiMaps['tieba-' + i] = emoji('tieba', i, 'png');
+  }
+  for (var i = 1; i <= 101; i++) {
+    emojiMaps['qq-' + i] = emoji('qq', i, 'gif');
+  }
+  for (var i = 1; i <= 116; i++) {
+    emojiMaps['aru-' + i] = emoji('aru', i, 'gif');
+  }
+  for (var i = 1; i <= 125; i++) {
+    emojiMaps['twemoji-' + i] = emoji('twemoji', i, 'png');
+  }
+  for (var i = 1; i <= 4; i++) {
+    emojiMaps['weibo-' + i] = emoji('weibo', i, 'png');
+  }
+  valine.init({
+    el: '#valine_container',
+    meta: meta,
+    
+    appId: "RiYNjqJY5xzBBsVs0MlMW1en-gzGzoHsz",
+    appKey: "kCbVzm4V28mGRc2DUN20obQY",
+    placeholder: "ヾﾉ≧∀≦)o来啊，快活啊!",
+    pageSize:'10',
+    avatar:'robohash',
+    lang:'zh-cn',
+    visitor: 'true',
+    highlight: 'true',
+    mathJax: 'false',
+    enableQQ: 'true',
+    requiredFields: requiredFields,
+    emojiCDN: 'https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/emoji/valine/',
+    emojiMaps: emojiMaps
+  })
+  </script>
 
 
 

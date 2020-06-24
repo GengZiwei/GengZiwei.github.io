@@ -266,49 +266,6 @@
   
 
   
-    <article id="page" class="post white-box reveal shadow article-type-page" itemscope itemprop="blogPost">
-      
-
-
-  <section class='meta'>
-    
-      
-      
-      <div class="meta" id="header-meta">
-        
-        <div class='new-meta-box'>
-          
-        </div>
-        
-      </div>
-    
-  </section>
-
-
-      <section class="article typo">
-        <div class="article-entry" itemprop="articleBody">
-          
-          
-          
-        </div>
-        
-          
-
-
-  <section class='meta' id="footer-meta">
-    <div class='new-meta-box'>
-      
-    </div>
-  </section>
-
-
-        
-        
-      </section>
-    </article>
-  
-
-  
     <!-- 显示推荐文章和评论 -->
 
 
@@ -360,13 +317,14 @@
 
   
     <meting-js
+      mini='false'
       theme='#1BCDFC'
       autoplay='true'
       volume='0.7'
       loop='none'
       order='list'
       fixed='false'
-      list-max-height='340px'
+      list-max-height='100px'
       server='netease'
       type='playlist'
       id='784415920'
@@ -558,11 +516,11 @@
   
   <script>
   var GUEST_INFO = ['nick','mail','link'];
-  var meta = 'nick'.split(',').filter(function(item){
+  var meta = 'nick,mail'.split(',').filter(function(item){
     return GUEST_INFO.indexOf(item) > -1
   });
   var REQUIRED_FIELDS = ['nick','mail','link'];
-  var requiredFields = 'nick'.split(',').filter(function(item){
+  var requiredFields = 'nick,mail'.split(',').filter(function(item){
     return REQUIRED_FIELDS.indexOf(item) > -1
   });
   var valine = new Valine();
