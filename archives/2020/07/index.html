@@ -5,6 +5,8 @@
   <!-- SEO相关 -->
   
     
+      <meta name="robots" content="noindex,follow">
+    
   
   <!-- 渲染优化 -->
   <meta name="renderer" content="webkit">
@@ -16,12 +18,8 @@
 
   <!-- 页面元数据 -->
   
-    <title>不知道的vue小技巧 - 清度|耿紫威的个人博客</title>
+    <title>归档：2020/7 - 清度|耿紫威的个人博客</title>
   
-    <meta name="keywords" content="vue,js">
-  
-  
-    <meta name="description" content="在平常敲代码过程中，我们总是想更快的处理好我们的代码逻辑实现对业务，但是却写出来了大量的不好维护代码，那是因为你没有使用到好的小技巧~">
   
 
   <!-- feed -->
@@ -74,7 +72,61 @@
 
 <body>
   
-  <div id="loading-bar-wrapper">
+  <div class="cover-wrapper">
+    
+      <cover class='cover  half'>
+        <div class='cover-body'>
+  <div class='a'>
+    
+    
+      <p class="title">有朋自远方来</p>
+    
+    
+      <p class="subtitle">亦是清都山水郎</p>
+    
+  </div>
+  <div class='b'>
+    
+      <div class="m_search">
+        <form name="searchform" class="form u-search-form">
+          <input type="text" class="input u-search-input" placeholder="" />
+          <i class="icon fas fa-search fa-fw"></i>
+        </form>
+      </div>
+    
+    <div class='menu navigation'>
+      <ul class='cover-list-h'>
+        
+          
+            <li>
+              <a class="nav home"
+                href="/music/"
+                
+                
+                id="music">
+                <i class='fas fa-music fa-fw'></i>音乐
+              </a>
+            </li>
+          
+            <li>
+              <a class="nav home"
+                href="https://gengziwei.github.io/"
+                
+                
+                id="https:gengziweigithubio">
+                <i class='fas fa-rss fa-fw'></i>博文
+              </a>
+            </li>
+          
+        
+      </ul>
+    </div>
+  </div>
+</div>
+
+      </cover>
+    
+    <div id="loading-bar-wrapper">
   <div id="loading-bar"></div>
 </div>
 <header class="l_header shadow blur">
@@ -264,18 +316,30 @@
 
 <script>setLoadingBarProgress(40);</script>
 
+  </div>
 
 
-  <div class="l_body nocover">
+  <div class="l_body">
     <div class='body-wrapper'>
       
 
 <div class='l_main'>
-  
-
-  
-    <article id="post" class="post white-box reveal shadow article-type-post" itemscope itemprop="blogPost">
+	
+		
+  <section class="post-list ">
+    
       
+        
+          
+        
+      
+    
+    
+      
+        
+          <div class='post-wrapper'>
+            <article class="post white-box shadow reveal ">
+  
 
 
   <section class='meta'>
@@ -285,11 +349,11 @@
       <div class="meta" id="header-meta">
         
           
-  <h1 class="title">
-    <a href="/2020/06/24/%E4%B8%8D%E7%9F%A5%E9%81%93%E7%9A%84vue%E5%B0%8F%E6%8A%80%E5%B7%A7/">
-      不知道的vue小技巧
+  <h2 class="title">
+    <a href="/2020/07/02/%E6%B5%8B%E9%87%8F%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F%E6%80%A7%E8%83%BD/">
+      监控应用程序性能
     </a>
-  </h1>
+  </h2>
 
 
         
@@ -301,9 +365,9 @@
               
   
   <div class='new-meta-item category'>
-    <a href='/categories/vue/' rel="nofollow">
+    <a href='/categories/web/' rel="nofollow">
       <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
-      <p>vue</p>
+      <p>web</p>
     </a>
   </div>
 
@@ -314,7 +378,7 @@
               <div class="new-meta-item date">
   <a class='notlink'>
     <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：2020年6月24日</p>
+    <p>发布于：2020年7月2日</p>
   </a>
 </div>
 
@@ -334,235 +398,97 @@
   </section>
 
 
-      <section class="article typo">
-        <div class="article-entry" itemprop="articleBody">
-          
-          <p>在平常敲代码过程中，我们总是想更快的处理好我们的代码逻辑实现对业务，但是却写出来了大量的不好维护代码，那是因为你没有使用到好的小技巧~</p>
-<a id="more"></a>
-
-<h2 id="1-使用-sync修饰符"><a href="#1-使用-sync修饰符" class="headerlink" title="1.使用.sync修饰符"></a>1.使用.sync修饰符</h2><blockquote>
-<p>2.3.0+ 新增</p>
-</blockquote>
-<p>在<a href="https://cn.vuejs.org/v2/guide/components-custom-events.html#sync-%E4%BF%AE%E9%A5%B0%E7%AC%A6" target="_blank" rel="noopener">官方文档</a>中介绍.sync为自定义事件的一种使用方式，可以对prop进行“双向绑定”.</p>
-<p>原来的做法</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">父级组件</span><br><span class="line">&lt;span :title&#x3D;&quot;title&quot;  @updata:title&#x3D;&quot;value &#x3D;&gt; title &#x3D; value&quot; &#x2F;&gt;</span><br><span class="line"></span><br><span class="line">#子级组件</span><br><span class="line">this.$emit(&#39;update:title&#39;, newTitle)</span><br></pre></td></tr></table></figure>
-
-<p>大家都知道vue进行对父级的直接修改会进行报错(修改是对象的值不算), 官方推荐使用的是$emit的方式来进行推送事件在父级进行修改数据，但是向上面的做法就会产生代码冗余数据也不好追踪并不能准确的知道在合适更新的数据，然后官方给出了一种定修饰符。</p>
-<p>.sync的做法</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># 父级组件</span><br><span class="line">&lt;span :title.sync&#x3D;&quot;title&quot; &#x2F;&gt;</span><br><span class="line"></span><br><span class="line">#子级组件</span><br><span class="line">this.$emit(&#39;update:title&#39;, newTitle)</span><br></pre></td></tr></table></figure>
-<p>可以看到父级还是之前一样进行传递 prop 值无任何的操作就可以直接完成对父级数据的修改不需要父级重新赋值, .sync 的固定格式为updata:属性名。</p>
-<p><strong>注意：</strong></p>
-<ul>
-<li>sync 传递值须传递一个变量执行，不然无法工作。</li>
-<li>sync 传递值不可以跟表达式进行一起使用。</li>
-</ul>
-<h2 id="2-attrs-和-listeners"><a href="#2-attrs-和-listeners" class="headerlink" title="2.$attrs 和 $listeners"></a>2.$attrs 和 $listeners</h2><blockquote>
-<p>2.4.0 新增</p>
-</blockquote>
-<p>$attrs 获取包含了父作用域中不作为 prop 的值（不包括class和style）</p>
-<p>$listeners 获取包含了父作用域中事件监听器（不包括.native修饰符）</p>
-<p>两个都是进行获取父级的传递的值，大家基本上都会对使用的ui组件进行二次封装来尽可能符合自己的业务，但是遇到那种传递 默认的prop的值跟不同展示不同的prop的时候或者不明确需要啥值的时候 这两个方法就派上用场了（在也不用一个个传递参数了）</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">#父组件</span><br><span class="line"></span><br><span class="line">&lt;childrenDialg</span><br><span class="line">  :title&#x3D;&quot;自定义title&quot;</span><br><span class="line">  :width&#x3D;&quot;40%&quot;</span><br><span class="line">  :dialogVisible&#x3D;&quot;dialogVisible &#x2F;&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># 子组件</span><br><span class="line">&lt;el-dialog</span><br><span class="line">  v-bind&#x3D;&quot;$attrs&quot;</span><br><span class="line">  :visible.sync&#x3D;&quot;dialogVisible&quot;</span><br><span class="line">  :before-close&#x3D;&quot;handleClose&quot;&gt;</span><br><span class="line">  &lt;span&gt;这是我展示的数据&lt;&#x2F;span&gt;</span><br><span class="line">  &lt;span slot&#x3D;&quot;footer&quot; class&#x3D;&quot;dialog-footer&quot;&gt;</span><br><span class="line">    &lt;el-button @click&#x3D;&quot;dialogVisible &#x3D; false&quot;&gt;取 消&lt;&#x2F;el-button&gt;</span><br><span class="line">    &lt;el-button type&#x3D;&quot;primary&quot; @click&#x3D;&quot;dialogVisible &#x3D; false&quot;&gt;确 定&lt;&#x2F;el-button&gt;</span><br><span class="line">  &lt;&#x2F;span&gt;</span><br><span class="line">&lt;&#x2F;el-dialog&gt;</span><br></pre></td></tr></table></figure>
-
-<p>就这样一个动态的传递参数就完成了我们可以看下打印的值<br><img src="/img/20200702102823%E6%89%93%E5%8D%B0$attrs.png" alt="Image text"></p>
-<p><strong>持续更新中</strong></p>
-
-          
-            <div class='article_footer'>
-              
-                
-  
-    
-    
-
-
-
-  
-
-  
-    
-    
-
-
-
-  
-
-
-              
-            </div>
-          
-        </div>
-        
-          
-
-
-  <section class='meta' id="footer-meta">
-    <div class='new-meta-box'>
+  <section class="article typo">
+    <div class="article-entry" itemprop="articleBody">
       
-        
-          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-07-02T14:34:32+08:00">
-  <a class='notlink'>
-    <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：2020年7月2日</p>
-  </a>
-</div>
-
-        
-      
-        
-          
-  
-  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/vue/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>vue</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/js/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>js</p></a></div>
-
-
-        
-      
-        
-          
-
-        
-      
-        
-          
-  <div class="new-meta-item share -mob-share-list">
-  <div class="-mob-share-list share-body">
-    
-      
-        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer"
-          
-          href="http://connect.qq.com/widget/shareqq/index.html?url=https://gengziwei.github.io/2020/06/24/%E4%B8%8D%E7%9F%A5%E9%81%93%E7%9A%84vue%E5%B0%8F%E6%8A%80%E5%B7%A7/&title=不知道的vue小技巧 - 清度|耿紫威的个人博客&summary=在平常敲代码过程中，我们总是想更快的处理好我们的代码逻辑实现对业务，但是却写出来了大量的不好维护代码，那是因为你没有使用到好的小技巧~"
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/logo/128/qq.png">
-          
-        </a>
-      
-    
-      
-        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer"
-          
-          href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://gengziwei.github.io/2020/06/24/%E4%B8%8D%E7%9F%A5%E9%81%93%E7%9A%84vue%E5%B0%8F%E6%8A%80%E5%B7%A7/&title=不知道的vue小技巧 - 清度|耿紫威的个人博客&summary=在平常敲代码过程中，我们总是想更快的处理好我们的代码逻辑实现对业务，但是却写出来了大量的不好维护代码，那是因为你没有使用到好的小技巧~"
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/logo/128/qzone.png">
-          
-        </a>
-      
-    
-      
-        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer"
-          
-          href="http://service.weibo.com/share/share.php?url=https://gengziwei.github.io/2020/06/24/%E4%B8%8D%E7%9F%A5%E9%81%93%E7%9A%84vue%E5%B0%8F%E6%8A%80%E5%B7%A7/&title=不知道的vue小技巧 - 清度|耿紫威的个人博客&summary=在平常敲代码过程中，我们总是想更快的处理好我们的代码逻辑实现对业务，但是却写出来了大量的不好维护代码，那是因为你没有使用到好的小技巧~"
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/logo/128/weibo.png">
-          
-        </a>
-      
-    
-  </div>
-</div>
-
-
-
-        
+        <p>近年来，WEB 开发者们为缩短用户等待时间做出了一系列方案，以期「短益求短」。比如用 PWA 缓存更多可用的离线资源，让网页应用打开更快；借助 WebAssembly 规范缩小资源体积，提高执行效率。这些方案分别着眼于网络链路，前端资源处理速度等维度上，致力提高用户体验。</p>
       
     </div>
+    
+      
+        <div class="button readmore">
+          <a href="/2020/07/02/%E6%B5%8B%E9%87%8F%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F%E6%80%A7%E8%83%BD/">
+            阅读 <i class="fas fa-chevron-right"></i>
+          </a>
+        </div>
+      
+    
   </section>
+</article>
 
-
-        
-        
-          <div class="prev-next">
-            
-              <a class='prev' href='/2020/07/02/%E6%B5%8B%E9%87%8F%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F%E6%80%A7%E8%83%BD/'>
-                <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>监控应用程序性能</p>
-                <p class='content'>近年来，WEB 开发者们为缩短用户等待时间做出了一系列方案，以期「短益求短」。比如用 PWA 缓存更多可用的离线资源，让网页应用打开更快；借助 WebAssembly 规范缩小资源体积，提高执行...</p>
-              </a>
-            
-            
-              <a class='next' href='/2020/06/19/hello-world/'>
-                <p class='title'>Hello<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
-                <p class='content'>这是我的第一篇文章,美好生活从这里开始。
-
-</p>
-              </a>
-            
           </div>
         
-      </section>
-    </article>
+      
+    
+  </section>
   
-
-  
-    <!-- 显示推荐文章和评论 -->
-
-
-
-  <article class="post white-box reveal comments shadow">
-    <section class="article typo">
-      <p ct><i class='fas fa-comments'></i> 评论</p>
-      
-      
-      
-      
-      
-      
-        <section id="comments">
-          <div id="valine_container" class="valine_thread">
-            <i class="fas fa-cog fa-spin fa-fw fa-2x"></i>
-          </div>
-        </section>
-      
-      
-    </section>
-  </article>
-
+    
+    <!-- 根据主题中的设置决定是否在archive中针对摘要部分的MathJax公式加载mathjax.js文件 -->
+    
+    
 
   
 
 
-
-
-<!-- 根据页面mathjax变量决定是否加载MathJax数学公式js -->
-
-
-
-  <script>
-    window.subData = {
-      title: '不知道的vue小技巧',
-      tools: true
-    }
-  </script>
-
-
+	
 </div>
 <aside class='l_side'>
   
   
-
+    
+    
   
-    
-    
 
-
-  <section class="widget toc-wrapper shadow desktop mobile">
+  <section class="widget category shadow desktop">
     
   <header>
     
-      <i class="fas fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
+      <a href='/categories/'><i class="fas fa-folder-open fa-fw" aria-hidden="true"></i><span class='name'>文章分类</span></a>
     
   </header>
 
 
     <div class='content'>
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-使用-sync修饰符"><span class="toc-text">1.使用.sync修饰符</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-attrs-和-listeners"><span class="toc-text">2.$attrs 和 $listeners</span></a></li></ol>
+      <ul class="entry navigation">
+        
+          <li><a class="flat-box"
+            title="/categories/vue/" href="/categories/vue/"
+            id="categoriesvue"
+            ><div class='name'>vue</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box"
+            title="/categories/web/" href="/categories/web/"
+            id="categoriesweb"
+            ><div class='name'>web</div><div class='badge'>(1)</div></a></li>
+        
+      </ul>
     </div>
   </section>
 
+
+  
+
+  
+    
+    
+  
+
+  <section class="widget tagcloud shadow desktop mobile">
+    
+  <header>
+    
+      <a href='/tags/'><i class="fas fa-tags fa-fw" aria-hidden="true"></i><span class='name'>热门标签</span></a>
+    
+  </header>
+
+
+    <div class='content'>
+      <a href="/tags/hello/" style="font-size: 14px; color: #999">hello</a> <a href="/tags/js/" style="font-size: 24px; color: #555">js</a> <a href="/tags/vue/" style="font-size: 14px; color: #999">vue</a> <a href="/tags/web/" style="font-size: 14px; color: #999">web</a> <a href="/tags/%E6%80%A7%E8%83%BD%E7%9B%91%E6%8E%A7/" style="font-size: 14px; color: #999">性能监控</a>
+    </div>
+  </section>
+
+
+  
 
   
 
@@ -657,6 +583,14 @@
   </footer>
 
 <script>setLoadingBarProgress(80);</script>
+
+
+
+
+	<!-- 根据主题中的设置决定是否在archive中针对摘要部分的MathJax公式加载mathjax.js文件 -->
+	
+
+	
 
 
       <script>setLoadingBarProgress(60);</script>
@@ -771,60 +705,6 @@
 
 
 
-
-  
-    
-<script src="https://cdn.jsdelivr.net/npm/valine@1.4/dist/Valine.min.js"></script>
-
-  
-  <script>
-  var GUEST_INFO = ['nick','mail','link'];
-  var meta = 'nick,mail'.split(',').filter(function(item){
-    return GUEST_INFO.indexOf(item) > -1
-  });
-  var REQUIRED_FIELDS = ['nick','mail','link'];
-  var requiredFields = 'nick,mail'.split(',').filter(function(item){
-    return REQUIRED_FIELDS.indexOf(item) > -1
-  });
-  var valine = new Valine();
-  function emoji(path, idx, ext) {
-      return path + "/" + path + "-" + idx + "." + ext;
-  }
-  var emojiMaps = {};
-  for (var i = 1; i <= 54; i++) {
-    emojiMaps['tieba-' + i] = emoji('tieba', i, 'png');
-  }
-  for (var i = 1; i <= 101; i++) {
-    emojiMaps['qq-' + i] = emoji('qq', i, 'gif');
-  }
-  for (var i = 1; i <= 116; i++) {
-    emojiMaps['aru-' + i] = emoji('aru', i, 'gif');
-  }
-  for (var i = 1; i <= 125; i++) {
-    emojiMaps['twemoji-' + i] = emoji('twemoji', i, 'png');
-  }
-  for (var i = 1; i <= 4; i++) {
-    emojiMaps['weibo-' + i] = emoji('weibo', i, 'png');
-  }
-  valine.init({
-    el: '#valine_container',
-    meta: meta,
-    
-    appId: "RiYNjqJY5xzBBsVs0MlMW1en-gzGzoHsz",
-    appKey: "kCbVzm4V28mGRc2DUN20obQY",
-    placeholder: "ヾﾉ≧∀≦)o来啊，快活啊!",
-    pageSize:'10',
-    avatar:'robohash',
-    lang:'zh-cn',
-    visitor: 'true',
-    highlight: 'true',
-    mathJax: 'false',
-    enableQQ: 'true',
-    requiredFields: requiredFields,
-    emojiCDN: 'https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/emoji/valine/',
-    emojiMaps: emojiMaps
-  })
-  </script>
 
 
 
