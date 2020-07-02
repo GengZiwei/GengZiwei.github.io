@@ -346,16 +346,17 @@
 <ul>
 <li>memory: 字段代表JavaScript对内存的占用。</li>
 <li>navigation: 在指定的时间段里发生的操作相关信息，包括页面是加载还是刷新、发生了多少次重定向等。</li>
-<li><strong>timeOrigin</strong>: 性能测量开始时的时间的高精度时间戳</li>
+<li><strong>timing</strong>: 包含延迟相关的性能信息，性能测量开始时的时间的高精度时间戳</li>
 </ul>
-<h2 id="2-timeOrigin-解析"><a href="#2-timeOrigin-解析" class="headerlink" title="2.timeOrigin 解析"></a>2.timeOrigin 解析</h2><ul>
-<li><p>startTime: 有些浏览器实现为navigationStart，代表浏览器开始unload前一个页面文档的开始时间节点。比如我们当前正在浏览baidu.com，在地址栏输入google.com并回车，浏览器的执行动作依次为：unload当前文档（即baidu.com）-&gt;请求下一文档（即google.com）。navigationStart的值便是触发unload当前文档的时间节点。如果当前文档为空，则navigationStart的值等于fetchStart。</p>
-</li>
-<li><p>redirectStart和redirectEnd: 如果页面是由redirect而来，则redirectStart和redirectEnd分别代表redirect开始和结束的时间节点。</p>
+<h2 id="2-timing-解析"><a href="#2-timing-解析" class="headerlink" title="2.timing 解析"></a>2.timing 解析</h2><blockquote>
+<p>文档来自<a href="https://developer.mozilla.org/zh-CN/docs/Web/API/PerformanceTiming" target="_blank" rel="noopener">MDN Web 文档</a></p>
+</blockquote>
+<ul>
+<li><p>redirectStart和redirectEnd: 如果页面是由redirect而来，则redirectStart和redirectEnd分别代表redirect开始和结束的时间节点,如果没有重定向，或者重定向中的一个不同源，这个值会返回0。</p>
 </li>
 <li><p>unloadEventStart和unloadEventEnd: 如果前一个文档和请求的文档是同一个域的，则unloadEventStart和unloadEventEnd分别代表浏览器unload前一个文档的开始和结束时间节点。否则两者都等于0。</p>
 </li>
-<li><p>fetchStart: 是指在浏览器发起任何请求之前的时间值。在fetchStart和domainLookupStart之间，浏览器会检查当前文档的缓存。</p>
+<li><p>fetchStart: 是指在浏览器发起任何请求之前的时间值，这个时间点会在检查任何应用缓存之前。</p>
 </li>
 <li><p>domainLookupStart和domainLookupEnd: 分别代表DNS查询的开始和结束时间节点。如果浏览器没有进行DNS查询（比如使用了cache），则两者的值都等于fetchStart。</p>
 </li>
@@ -387,6 +388,15 @@
 </ul>
 <ul>
 <li>loadEventStart和loadEventEnd: 分别代表onload事件触发和结束的时间节点。</li>
+</ul>
+<h2 id="相关时间计算"><a href="#相关时间计算" class="headerlink" title="相关时间计算"></a>相关时间计算</h2><ul>
+<li>白屏时间 = domloading - fetchStart</li>
+<li>onload总下载时间 = loadEventEnd - fetchStart</li>
+<li>request请求耗时 = responseEnd - responseStart</li>
+<li>TCP链接耗时 = connectEnd - connectStart</li>
+<li>DNS查询耗时 = domainLookupEnd - domainLookupStart</li>
+<li>解析dom树耗时 = domComplete - domInteractive</li>
+<li>domready可操作时间 = domContentLoadedEventEnd - fetchStart</li>
 </ul>
 
           
@@ -422,7 +432,7 @@
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-07-02T14:57:02+08:00">
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-07-02T15:49:42+08:00">
   <a class='notlink'>
     <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
     <p>更新于：2020年7月2日</p>
@@ -580,7 +590,7 @@
 
 
     <div class='content'>
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-performance"><span class="toc-text">1.performance</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-timeOrigin-解析"><span class="toc-text">2.timeOrigin 解析</span></a></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-performance"><span class="toc-text">1.performance</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-timing-解析"><span class="toc-text">2.timing 解析</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#相关时间计算"><span class="toc-text">相关时间计算</span></a></li></ol>
     </div>
   </section>
 
