@@ -356,17 +356,15 @@
 <li>sync 传递值须传递一个变量执行，不然无法工作。</li>
 <li>sync 传递值不可以跟表达式进行一起使用。</li>
 </ul>
-<h2 id="attrs-和-listeners"><a href="#attrs-和-listeners" class="headerlink" title="$attrs 和 $listeners"></a>$attrs 和 $listeners</h2><blockquote>
+<h2 id="2-attrs-和-listeners"><a href="#2-attrs-和-listeners" class="headerlink" title="2.$attrs 和 $listeners"></a>2.$attrs 和 $listeners</h2><blockquote>
 <p>2.4.0 新增</p>
 </blockquote>
 <p>$attrs 获取包含了父作用域中不作为 prop 的值（不包括class和style）</p>
 <p>$listeners 获取包含了父作用域中事件监听器（不包括.native修饰符）</p>
 <p>两个都是进行获取父级的传递的值，大家基本上都会对使用的ui组件进行二次封装来尽可能符合自己的业务，但是遇到那种传递 默认的prop的值跟不同展示不同的prop的时候或者不明确需要啥值的时候 这两个方法就派上用场了（在也不用一个个传递参数了）</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">#父组件</span><br><span class="line"></span><br><span class="line">&lt;childrenDialg</span><br><span class="line">  :title&#x3D;&quot;自定义title&quot;</span><br><span class="line">  :width&#x3D;&quot;40%&quot;</span><br><span class="line">  :dialogVisible&#x3D;&quot;dialogVisible &#x2F;&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># 子组件</span><br><span class="line">&lt;el-dialog</span><br><span class="line">  v-bind&#x3D;&quot;$attrs&quot;</span><br><span class="line">  :title&#x3D;&quot;title&quot;</span><br><span class="line">  :visible.sync&#x3D;&quot;dialogVisible&quot;</span><br><span class="line">  :before-close&#x3D;&quot;handleClose&quot;&gt;</span><br><span class="line">  &lt;span&gt;这是一段信息&lt;&#x2F;span&gt;</span><br><span class="line">  &lt;span slot&#x3D;&quot;footer&quot; class&#x3D;&quot;dialog-footer&quot;&gt;</span><br><span class="line">    &lt;el-button @click&#x3D;&quot;dialogVisible &#x3D; false&quot;&gt;取 消&lt;&#x2F;el-button&gt;</span><br><span class="line">    &lt;el-button type&#x3D;&quot;primary&quot; @click&#x3D;&quot;dialogVisible &#x3D; false&quot;&gt;确 定&lt;&#x2F;el-button&gt;</span><br><span class="line">  &lt;&#x2F;span&gt;</span><br><span class="line">&lt;&#x2F;el-dialog&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">#父组件</span><br><span class="line"></span><br><span class="line">&lt;childrenDialg</span><br><span class="line">  :title&#x3D;&quot;自定义title&quot;</span><br><span class="line">  :width&#x3D;&quot;40%&quot;</span><br><span class="line">  :dialogVisible&#x3D;&quot;dialogVisible &#x2F;&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># 子组件</span><br><span class="line">&lt;el-dialog</span><br><span class="line">  v-bind&#x3D;&quot;$attrs&quot;</span><br><span class="line">  :visible.sync&#x3D;&quot;dialogVisible&quot;</span><br><span class="line">  :before-close&#x3D;&quot;handleClose&quot;&gt;</span><br><span class="line">  &lt;span&gt;这是我展示的数据&lt;&#x2F;span&gt;</span><br><span class="line">  &lt;span slot&#x3D;&quot;footer&quot; class&#x3D;&quot;dialog-footer&quot;&gt;</span><br><span class="line">    &lt;el-button @click&#x3D;&quot;dialogVisible &#x3D; false&quot;&gt;取 消&lt;&#x2F;el-button&gt;</span><br><span class="line">    &lt;el-button type&#x3D;&quot;primary&quot; @click&#x3D;&quot;dialogVisible &#x3D; false&quot;&gt;确 定&lt;&#x2F;el-button&gt;</span><br><span class="line">  &lt;&#x2F;span&gt;</span><br><span class="line">&lt;&#x2F;el-dialog&gt;</span><br></pre></td></tr></table></figure>
 
-
-
-
+<p>就这样一个动态的传递参数就完成了我们可以看下打印的值<br><img src="img/" alt="Image text"></p>
 <p><strong>持续更新中</strong></p>
 
           
@@ -402,10 +400,10 @@
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-06-26T19:41:40+08:00">
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-07-02T13:57:32+08:00">
   <a class='notlink'>
     <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：2020年6月26日</p>
+    <p>更新于：2020年7月2日</p>
   </a>
 </div>
 
@@ -556,7 +554,7 @@
 
 
     <div class='content'>
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-使用-sync修饰符"><span class="toc-text">1.使用.sync修饰符</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#attrs-和-listeners"><span class="toc-text">$attrs 和 $listeners</span></a></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-使用-sync修饰符"><span class="toc-text">1.使用.sync修饰符</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-attrs-和-listeners"><span class="toc-text">2.$attrs 和 $listeners</span></a></li></ol>
     </div>
   </section>
 
