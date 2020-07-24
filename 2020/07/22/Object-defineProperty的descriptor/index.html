@@ -5,8 +5,6 @@
   <!-- SEO相关 -->
   
     
-      <meta name="robots" content="noindex,follow">
-    
   
   <!-- 渲染优化 -->
   <meta name="renderer" content="webkit">
@@ -18,8 +16,10 @@
 
   <!-- 页面元数据 -->
   
-    <title>归档：2020/7 - 清度|耿紫威的个人博客</title>
+    <title>Object.defineProperty的descriptor - 清度|耿紫威的个人博客</title>
   
+  
+    <meta name="description" content="Object.defineProperty() 方法会直接在一个对象上定义一个新属性，或者修改一个对象的现有属性，并返回此对象">
   
 
   <!-- feed -->
@@ -77,61 +77,7 @@
 
 <body>
   
-  <div class="cover-wrapper">
-    
-      <cover class='cover  half'>
-        <div class='cover-body'>
-  <div class='a'>
-    
-    
-      <p class="title">有朋自远方来</p>
-    
-    
-      <p class="subtitle">亦是清都山水郎</p>
-    
-  </div>
-  <div class='b'>
-    
-      <div class="m_search">
-        <form name="searchform" class="form u-search-form">
-          <input type="text" class="input u-search-input" placeholder="" />
-          <i class="icon fas fa-search fa-fw"></i>
-        </form>
-      </div>
-    
-    <div class='menu navigation'>
-      <ul class='cover-list-h'>
-        
-          
-            <li>
-              <a class="nav home"
-                href="/music/"
-                
-                
-                id="music">
-                <i class='fas fa-music fa-fw'></i>音乐
-              </a>
-            </li>
-          
-            <li>
-              <a class="nav home"
-                href="https://gengziwei.github.io/"
-                
-                
-                id="https:gengziweigithubio">
-                <i class='fas fa-rss fa-fw'></i>博文
-              </a>
-            </li>
-          
-        
-      </ul>
-    </div>
-  </div>
-</div>
-
-      </cover>
-    
-    <div id="loading-bar-wrapper">
+  <div id="loading-bar-wrapper">
   <div id="loading-bar"></div>
 </div>
 <header class="l_header shadow blur">
@@ -321,32 +267,18 @@
 
 <script>setLoadingBarProgress(40);</script>
 
-  </div>
 
 
-  <div class="l_body">
+  <div class="l_body nocover">
     <div class='body-wrapper'>
       
 
 <div class='l_main'>
-	
-		
-  <section class="post-list ">
-    
-      
-        
-          
-        
-          
-        
-      
-    
-    
-      
-        
-          <div class='post-wrapper'>
-            <article class="post white-box shadow reveal ">
   
+
+  
+    <article id="post" class="post white-box reveal shadow article-type-post" itemscope itemprop="blogPost">
+      
 
 
   <section class='meta'>
@@ -356,11 +288,11 @@
       <div class="meta" id="header-meta">
         
           
-  <h2 class="title">
+  <h1 class="title">
     <a href="/2020/07/22/Object-defineProperty%E7%9A%84descriptor/">
       Object.defineProperty的descriptor
     </a>
-  </h2>
+  </h1>
 
 
         
@@ -397,180 +329,203 @@
   </section>
 
 
-  <section class="article typo">
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Object.defineProperty() 方法会直接在一个对象上定义一个新属性，或者修改一个对象的现有属性，并返回此对象</p>
-      
-    </div>
-    
-      
-        <div class="button readmore">
-          <a href="/2020/07/22/Object-defineProperty%E7%9A%84descriptor/">
-            阅读 <i class="fas fa-chevron-right"></i>
-          </a>
-        </div>
-      
-    
-  </section>
-</article>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <article class="post white-box shadow reveal ">
-  
-
-
-  <section class='meta'>
-    
-      
-      
-      <div class="meta" id="header-meta">
-        
+      <section class="article typo">
+        <div class="article-entry" itemprop="articleBody">
           
-  <h2 class="title">
-    <a href="/2020/07/02/%E6%B5%8B%E9%87%8F%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F%E6%80%A7%E8%83%BD/">
-      监控应用程序性能
-    </a>
-  </h2>
+          <p>Object.defineProperty() 方法会直接在一个对象上定义一个新属性，或者修改一个对象的现有属性，并返回此对象</p>
+<a id="more"></a>
 
-
-        
-        <div class='new-meta-box'>
+<p>defineProperty接收三个参数</p>
+<p><strong>obj</strong>:<br>定义属性的对象</p>
+<p><strong>prop</strong>:<br>要定义或修改的属性的名称或 Symbol</p>
+<p><strong>descriptor</strong>:<br>定义或修改的属性描述符</p>
+<h3 id="descriptor"><a href="#descriptor" class="headerlink" title="descriptor"></a>descriptor</h3>
           
-            
-          
-            
+            <div class='article_footer'>
               
+                
   
-  <div class='new-meta-item category'>
-    <a href='/categories/web/' rel="nofollow">
-      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
-      <p>web</p>
-    </a>
-  </div>
+    
+    
 
 
-            
+
+  
+
+  
+    
+    
+
+
+
+  
+
+
+              
+            </div>
           
-            
-              <div class="new-meta-item date">
+        </div>
+        
+          
+
+
+  <section class='meta' id="footer-meta">
+    <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-07-22T18:11:20+08:00">
   <a class='notlink'>
-    <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：2020年7月2日</p>
+    <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
+    <p>更新于：2020年7月22日</p>
   </a>
 </div>
 
-            
-          
-            
-              
-
-            
-          
-        </div>
         
-          <hr>
-        
-      </div>
-    
-  </section>
-
-
-  <section class="article typo">
-    <div class="article-entry" itemprop="articleBody">
       
-        <p>近年来，WEB 开发者们为缩短用户等待时间做出了一系列方案，以期「短益求短」。比如用 PWA 缓存更多可用的离线资源，让网页应用打开更快；借助 WebAssembly 规范缩小资源体积，提高执行效率。这些方案分别着眼于网络链路，前端资源处理速度等维度上，致力提高用户体验, 数据方面的性能并不能得到及时的反馈。</p>
+        
+          
+
+        
+      
+        
+          
+
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
+    
+      
+        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer"
+          
+          href="http://connect.qq.com/widget/shareqq/index.html?url=https://gengziwei.github.io/2020/07/22/Object-defineProperty%E7%9A%84descriptor/&title=Object.defineProperty的descriptor - 清度|耿紫威的个人博客&summary=Object.defineProperty() 方法会直接在一个对象上定义一个新属性，或者修改一个对象的现有属性，并返回此对象"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/logo/128/qq.png">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer"
+          
+          href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://gengziwei.github.io/2020/07/22/Object-defineProperty%E7%9A%84descriptor/&title=Object.defineProperty的descriptor - 清度|耿紫威的个人博客&summary=Object.defineProperty() 方法会直接在一个对象上定义一个新属性，或者修改一个对象的现有属性，并返回此对象"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/logo/128/qzone.png">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer"
+          
+          href="http://service.weibo.com/share/share.php?url=https://gengziwei.github.io/2020/07/22/Object-defineProperty%E7%9A%84descriptor/&title=Object.defineProperty的descriptor - 清度|耿紫威的个人博客&summary=Object.defineProperty() 方法会直接在一个对象上定义一个新属性，或者修改一个对象的现有属性，并返回此对象"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/logo/128/weibo.png">
+          
+        </a>
+      
+    
+  </div>
+</div>
+
+
+
+        
       
     </div>
-    
-      
-        <div class="button readmore">
-          <a href="/2020/07/02/%E6%B5%8B%E9%87%8F%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F%E6%80%A7%E8%83%BD/">
-            阅读 <i class="fas fa-chevron-right"></i>
-          </a>
-        </div>
-      
-    
   </section>
-</article>
 
+
+        
+        
+          <div class="prev-next">
+            
+            
+              <a class='next' href='/2020/07/02/%E6%B5%8B%E9%87%8F%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F%E6%80%A7%E8%83%BD/'>
+                <p class='title'>监控应用程序性能<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+                <p class='content'>近年来，WEB 开发者们为缩短用户等待时间做出了一系列方案，以期「短益求短」。比如用 PWA 缓存更多可用的离线资源，让网页应用打开更快；借助 WebAssembly 规范缩小资源体积，提高执行...</p>
+              </a>
+            
           </div>
         
+      </section>
+    </article>
+  
+
+  
+    <!-- 显示推荐文章和评论 -->
+
+
+
+  <article class="post white-box reveal comments shadow">
+    <section class="article typo">
+      <p ct><i class='fas fa-comments'></i> 评论</p>
       
-    
-  </section>
-  
-    
-    <!-- 根据主题中的设置决定是否在archive中针对摘要部分的MathJax公式加载mathjax.js文件 -->
-    
-    
+      
+      
+      
+      
+      
+        <section id="comments">
+          <div id="valine_container" class="valine_thread">
+            <i class="fas fa-cog fa-spin fa-fw fa-2x"></i>
+          </div>
+        </section>
+      
+      
+    </section>
+  </article>
+
 
   
 
 
-	
+
+
+<!-- 根据页面mathjax变量决定是否加载MathJax数学公式js -->
+
+
+
+  <script>
+    window.subData = {
+      title: 'Object.defineProperty的descriptor',
+      tools: true
+    }
+  </script>
+
+
 </div>
 <aside class='l_side'>
   
   
-    
-    
-  
 
-  <section class="widget category shadow desktop">
+  
+    
+    
+
+
+  <section class="widget toc-wrapper shadow desktop mobile">
     
   <header>
     
-      <a href='/categories/'><i class="fas fa-folder-open fa-fw" aria-hidden="true"></i><span class='name'>文章分类</span></a>
+      <i class="fas fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
     
   </header>
 
 
     <div class='content'>
-      <ul class="entry navigation">
-        
-          <li><a class="flat-box"
-            title="/categories/vue/" href="/categories/vue/"
-            id="categoriesvue"
-            ><div class='name'>vue</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/web/" href="/categories/web/"
-            id="categoriesweb"
-            ><div class='name'>web</div><div class='badge'>(1)</div></a></li>
-        
-      </ul>
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#descriptor"><span class="toc-text">descriptor</span></a></li></ol>
     </div>
   </section>
 
-
-  
-
-  
-    
-    
-  
-
-  <section class="widget tagcloud shadow desktop mobile">
-    
-  <header>
-    
-      <a href='/tags/'><i class="fas fa-tags fa-fw" aria-hidden="true"></i><span class='name'>热门标签</span></a>
-    
-  </header>
-
-
-    <div class='content'>
-      <a href="/tags/hello/" style="font-size: 14px; color: #999">hello</a> <a href="/tags/js/" style="font-size: 24px; color: #555">js</a> <a href="/tags/vue/" style="font-size: 14px; color: #999">vue</a> <a href="/tags/web/" style="font-size: 14px; color: #999">web</a> <a href="/tags/%E6%80%A7%E8%83%BD%E7%9B%91%E6%8E%A7/" style="font-size: 14px; color: #999">性能监控</a>
-    </div>
-  </section>
-
-
-  
 
   
 
@@ -665,14 +620,6 @@
   </footer>
 
 <script>setLoadingBarProgress(80);</script>
-
-
-
-
-	<!-- 根据主题中的设置决定是否在archive中针对摘要部分的MathJax公式加载mathjax.js文件 -->
-	
-
-	
 
 
       <script>setLoadingBarProgress(60);</script>
@@ -787,6 +734,60 @@
 
 
 
+
+  
+    
+<script src="https://cdn.jsdelivr.net/npm/valine@1.4/dist/Valine.min.js"></script>
+
+  
+  <script>
+  var GUEST_INFO = ['nick','mail','link'];
+  var meta = 'nick,mail'.split(',').filter(function(item){
+    return GUEST_INFO.indexOf(item) > -1
+  });
+  var REQUIRED_FIELDS = ['nick','mail','link'];
+  var requiredFields = 'nick,mail'.split(',').filter(function(item){
+    return REQUIRED_FIELDS.indexOf(item) > -1
+  });
+  var valine = new Valine();
+  function emoji(path, idx, ext) {
+      return path + "/" + path + "-" + idx + "." + ext;
+  }
+  var emojiMaps = {};
+  for (var i = 1; i <= 54; i++) {
+    emojiMaps['tieba-' + i] = emoji('tieba', i, 'png');
+  }
+  for (var i = 1; i <= 101; i++) {
+    emojiMaps['qq-' + i] = emoji('qq', i, 'gif');
+  }
+  for (var i = 1; i <= 116; i++) {
+    emojiMaps['aru-' + i] = emoji('aru', i, 'gif');
+  }
+  for (var i = 1; i <= 125; i++) {
+    emojiMaps['twemoji-' + i] = emoji('twemoji', i, 'png');
+  }
+  for (var i = 1; i <= 4; i++) {
+    emojiMaps['weibo-' + i] = emoji('weibo', i, 'png');
+  }
+  valine.init({
+    el: '#valine_container',
+    meta: meta,
+    
+    appId: "RiYNjqJY5xzBBsVs0MlMW1en-gzGzoHsz",
+    appKey: "kCbVzm4V28mGRc2DUN20obQY",
+    placeholder: "ヾﾉ≧∀≦)o来啊，快活啊!",
+    pageSize:'10',
+    avatar:'robohash',
+    lang:'zh-cn',
+    visitor: 'true',
+    highlight: 'true',
+    mathJax: 'false',
+    enableQQ: 'true',
+    requiredFields: requiredFields,
+    emojiCDN: 'https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/emoji/valine/',
+    emojiMaps: emojiMaps
+  })
+  </script>
 
 
 
